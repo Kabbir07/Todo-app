@@ -25,7 +25,7 @@ class SQLHelper {
     );
   }
 
-  // Create new item 
+  // Create new item
   static Future<int> createItem(String title, String? descrption) async {
     final db = await SQLHelper.db();
 
@@ -35,7 +35,7 @@ class SQLHelper {
     return id;
   }
 
-  // Read all items 
+  // Read all items
   static Future<List<Map<String, dynamic>>> getItems() async {
     final db = await SQLHelper.db();
     return db.query('items', orderBy: "id");
